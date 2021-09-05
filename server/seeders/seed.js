@@ -1,7 +1,8 @@
 const faker = require('faker');
 
 const db = require('../config/connection');
-const { Book, User } = require('../models');
+const { User } = require('../models/User');
+const { Book } = require('../models/Book');
 
 db.once('open', async () => {
   await Book.deleteMany({});
@@ -41,4 +42,13 @@ db.once('open', async () => {
 
   console.log('all done!');
   process.exit(0);
+})
+
+.catch(error => {
+  console.error(error);
 });
+
+
+
+
+
