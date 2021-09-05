@@ -4,9 +4,18 @@ import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap
 import { getMe, deleteBook } from '../utils/API';
 import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
+import {useQuery} from '@apollo/react-hooks';
+import { QUERY_GET_ME } from '../utils/queries';
 
 const SavedBooks = () => {
-  const [userData, setUserData] = useState({});
+  // use useQuery hook to make query request
+  //loading property since it is async req
+  //Once loaded, info stored in destructured data prop
+  const { loading, data } = useQuery(GET_ME);
+  //loading property = ablility to conditionally render data based on whether or not there is data to even display
+
+  //optional chaining = if data exists, store userData; If data is undefined, save an empty array to the userData component
+  const userData = data?.me || [];
 
   // use this to determine if `useEffect()` hook needs to run again
   const userDataLength = Object.keys(userData).length;
