@@ -21,14 +21,14 @@ Clone this repo using the git clone command! Once cloned, download the necessary
 Visit https://ericababb.github.io/react-portfolio/ for the deployed app.
 
 The Search for Books Page:
-![Search page](./src/assets/images/search.png)
+![Search page](./client/src/assets/images/search.png)
 Users can search any keyword for a list of books: Users can add any book to your save list here.
 
 Saved Books Page:
-![Works page](./src/assets/images/saved1.png)
+![Works page](./client/src/assets/images/saved1.png)
 Here is the list of saved books.
 
-![Contact page](./src/assets/images/saved2.png)
+![Contact page](./client/src/assets/images/saved2.png)
 Users have the option to delete any books on your save list.
 
 
