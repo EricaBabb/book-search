@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
 //Import mutations and queries from apollo
 import {useMutation, useQuery} from '@apollo/react-hooks';
@@ -11,6 +11,8 @@ import { REMOVE_BOOK } from '../utils/mutations';
 import { GET_ME } from '../utils/queries';
 
 const SavedBooks = () => {
+  
+  // const [userData, setUserData] = useState({});
   // use useQuery hook to make query request
   //loading property since it is async req
   //Once loaded, info stored in destructured data prop
@@ -39,7 +41,7 @@ const SavedBooks = () => {
       //using the imported useMutation hook
       await removeBook({
         variables: {bookId: bookId}});
-      setUserData(updatedUser);
+      // setUserData(updatedUser);
       // upon success, remove book's id from localStorage
       removeBookId(bookId);
     } catch (err) {

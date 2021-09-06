@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Jumbotron, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
 
 import Auth from '../utils/auth';
-import { saveBook, searchGoogleBooks } from '../utils/API';
+import { searchGoogleBooks } from '../utils/API';
 import { saveBookIds, getSavedBookIds } from '../utils/localStorage';
 //Import useMutation hook from apollo
 import { useMutation } from '@apollo/react-hooks';
@@ -46,7 +46,7 @@ const SearchBooks = () => {
 
       const bookData = items.map((book) => ({
         bookId: book.id,
-        authors: book.volumeInfo.authors || ['No author to display'],
+        authors: book.volumeInfo.authors || ['No author'],
         title: book.volumeInfo.title,
         description: book.volumeInfo.description,
         image: book.volumeInfo.imageLinks?.thumbnail || '',
