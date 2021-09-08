@@ -18,7 +18,7 @@ Clone this repo using the git clone command! Once cloned, download the necessary
 
 ## Usage
 
-Visit https://ericababb.github.io/react-portfolio/ for the deployed app.
+Visit https://frozen-waters-07070.herokuapp.com/ for the deployed app.
 
 The Search for Books Page:
 ![Search page](./client/src/assets/images/search.png)
